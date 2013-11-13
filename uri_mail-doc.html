@@ -1,0 +1,96 @@
+<style type="text/css">
+table.uri-list {
+  border: 1px solid #cccccc;
+  width: 100%;
+}
+table.uri-list td, table.uri-list th {
+  padding: .5em 1.5em;
+  border: 1px solid #cccccc;
+}
+table.uri-list th {
+  background-color: #EFFFAC;
+}
+</style>
+
+<h1>UriMail plugin help</h1>
+
+<p>This is a plugin that creates a contact form in the public section. Messages sent by the users through this form will be saved in the plugin tab in the 'Extensions' section, so the administrator will be able to read and delete them.</p>
+
+<p><strong>Version:</strong> 0.1.</p>
+
+<h2 id="sec0">Table of contents</h2>
+
+<ol>
+<li><a href="#sec1">Features</a></li>
+<li><a href="#sec2">What to do after the installation</a></li>
+<li><a href="#sec3">How to use</a></li>
+<li><a href="#sec4">How to customize</a></li>
+<li><a href="#sec5">Managing the messages</a></li>
+<li><a href="#sec6">Examples</a></li>
+<li><a href="#sec7">License</a></li>
+<li><a href="#sec8">Contact me</a></li>
+</ol>
+
+<h2 id="sec1">Features</h2>
+<p>This plugin creates a form with three fields: two input fields, called "Object" and "Mail", and a textarea to write the message in. The object field should contain a title of the message, as email objects. In the email field the user should write his own email address, so the administrator will be able to contact him later.</p>
+<p><a href="#sec0">&#8593 Top</a></p>
+
+<h2 id="sec2">What to do after the installation</h2>
+<p>After installing the plugin, go to the <i>Extensions</i> tab and select the UriMail subsection: the plugin will create a db table to store the messages.</p>
+<p>You should see this:</p>
+<table class="uri-list">
+  <thead>
+    <th>Id</th>
+    <th>Object</th>
+    <th>Mail</th>
+    <th>Message</th>
+  </thead>
+</table>
+<p>Because there's no content yet.</p>
+<p><a href="#sec0">&#8593 Top</a></p>
+
+<h2 id="sec3">Tags, i.e.: how to use</h2>
+<p>The most simple tag here is <code>&lt;txp:uri_mail /&gt;</code>, that creates something linke this:</p>
+<form>
+  <label>Your email</label><br />
+  <input type='text' maxlength='100' name='uriMail' /><br />
+  <label>Object</label><br />
+  <input type='text' maxlength='100' name='uriObject' /><br />
+  <label>Your message</label><br />
+  <textarea cols='58' rows='8' name='uriMessage'></textarea><br />
+  <input type='submit' name='uriSend' value='Send' />
+</form>
+<p><a href="#sec0">&#8593 Top</a></p>
+<p></p>
+
+<h2 id="sec4">Tag parameters, i.e.:how to customize</h2>
+<p>There are three parameters that let you change the label of the three fields:</p>
+<ul>
+  <li><strong>mail_label</strong>, that changes the label of the email field; its default value is "Your email".</li>
+  <li><strong>object_label</strong>, that changes the label of the object field; its default value is "Object".</li>
+  <li><strong>message_label</strong>, that changes the label of the message textarea; its default value is "Your message".</li>
+</ul>
+<p><a href="#sec0">&#8593 Top</a></p>
+
+<h2 id="sec5">Managing the messages</h2>
+<p>When you visit the UriMail tab in the Extensions section, you can see the messages sent to you; clicking on a line lets you see the complete text, with also a link to delete the messages you don't need any more.</p>
+<p><a href="#sec0">&#8593 Top</a></p>
+
+<h2 id="sec6">Examples</h2>
+<p>Default form:</p>
+<code>
+  &lt;txp:uri_mail /&gt;
+</code>
+<p>Custom form:</p>
+<code>
+  &lt;txp:uri_mail mail_label="Mail address here, please:" message_label="What would you like to ask?" /&gt;
+</code>
+<p><a href="#sec0">&#8593 Top</a></p>
+
+<h2 id="sec7">License</h2>
+<p>This plugin is open source, and it couldn't be otherwise since it has been writter in PHP. The source is on GitHub, too; you can do everything you want with it, but you can't sell it for money, even after modifying its code. I'll be happy if you improve and/or redistribute it; some credits to me would be also appreciated.</p>
+<p><a href="#sec0">&#8593 Top</a></p>
+
+<h2 id="sec8">Contact me</h2>
+My website is <a href="http://www.magratheadesign.co.nf" target="_blank">Magrathea design</a>. Do you want to ask me something? Use the form in my <a href="http://www.magratheadesign.co.nf/index.php?id=5" target="_blank">Contact page</a>. Made with UriMail, of course!
+<p><a href="#sec0">&#8593 Top</a></p>
