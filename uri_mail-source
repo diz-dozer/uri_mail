@@ -117,6 +117,7 @@ function uri_mail_list() {
     $object = htmlspecialchars($row['object']);
     $mail = htmlspecialchars($row['mail']);
     $message = uri_excerpt($row['message']);
+    $message = stripslashes($message);
     echo "<tr>
             <td>$id</td>
             <td>$object</td>
@@ -138,6 +139,7 @@ function uri_mail_show() {
   $uriObject = $message['object'];
   $uriMail = $message['mail'];
   $uriMessage = $message['message'];
+  $uriMessage = stripslashes($uriMessage);
   echo "<h1>Message $uriId</h1>
         <p><a href='mailto:$uriMail'>$uriMail</a></p>
         <h2>$uriObject</h2>
